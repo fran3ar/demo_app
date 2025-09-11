@@ -1,0 +1,8 @@
+streamlit==1.44.*
+extra-streamlit-components==0.1.*
+streamlit-cookies-manager==0.2.0
+pandas
+openpyxl
+SQLAlchemy==2.0.*
+psycopg2-binary==2.9.*
+plotly==6.0.0
