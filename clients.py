@@ -9,7 +9,20 @@ def load_data(query):
 def app():
     st.subheader("📊 Clients")
 
+    query = """
+        SELECT
+            client_name,
+            gender,
+            birthdate,
+            city,
+            membership_type,
+            created_at,
+            id
+        FROM my_schema_1.clients;
+    """
+    
     # load data
-    transactions = load_data("SELECT * FROM my_schema_1.clients")
-
+    transactions = load_data(query)
+    st.write("🔢 Query")
+    st.code(str(query),language="sql")
     st.dataframe(transactions, use_container_width=True, hide_index=True)

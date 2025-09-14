@@ -24,5 +24,6 @@ def app():
     
     # load data
     transactions = load_data(query)
+    st.write("🔢 Query")
     st.code(str(query),language="sql")
     st.dataframe(transactions, use_container_width=True, hide_index=True)
